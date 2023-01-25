@@ -1,11 +1,6 @@
 import view
 import model
 
-
-
-
-
-
 def Start():
     model.GetLastStudentId()
     model.GetClasses()
@@ -16,4 +11,3 @@ def Start():
             stop = True
     model.SaveClasses()
     model.SaveLastStudentId()
-    
