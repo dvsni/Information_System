@@ -5,6 +5,7 @@ import model
 
 
 
+
 def Start():
     model.GetLastStudentId()
     model.GetClasses()
