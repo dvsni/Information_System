@@ -2,7 +2,7 @@ import view
 
 
 # students
-{1: {'Имя': 'Иван', 'Фамилия': 'Иванов', 'День рождение': '2000-01-01'}}
+{1: {'Имя': 'Иван', 'Фамилия': 'Иванов', 'День рождения': '2000-01-01'}}
 # class
 {'1А': [], '1Б': []}
 
@@ -15,9 +15,9 @@ classes = {}
 def AddNewStudent():
     new_student = dict()
     new_student['Id'] = GetNewId()
-    new_student['Имя'] = view.GetNewStudentInfo('students first_name')
-    new_student['Фамилия'] = view.GetNewStudentInfo('students last name')
-    new_student['Birthday'] = view.GetNewStudentInfo('students birthday')
+    new_student['Имя'] = view.GetNewStudentInfo('Имя студента')
+    new_student['Фамилия'] = view.GetNewStudentInfo('Фамилия студента')
+    new_student['День рождения'] = view.GetNewStudentInfo('День рождения студента')
     AddStudentsInClass(new_student['Id'])
     return new_student
 
@@ -30,7 +30,7 @@ def GetNewId():
 
 def SaveStudents(student):
     with open('students.csv', 'a') as file:
-        file.write(f"{student['Id']};{student['First_Name']};{student['Last_Name']};{student['Birthday']}\n")
+        file.write(f"{student['Id']};{student['Имя']};{student['Фамилия']};{student['День рождения']}\n")
 
 
 def AddStudentsInClass(student_id):
